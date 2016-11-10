@@ -71,7 +71,7 @@ class TestCosineCalculation(unittest.TestCase):
         d1.bag_of_words = {'Julie': 1, 'Linda': 1, 'loves': 2, 'me': 2, 'more': 1, 'than': 1}
 
         d2 = Document(2)
-        d2.bag_of_words =  {'Jane': 1, 'Julie': 1, 'likes': 1, 'loves': 1, 'me': 2, 'more': 1, 'than': 1}
+        d2.bag_of_words = {'Jane': 1, 'Julie': 1, 'likes': 1, 'loves': 1, 'me': 2, 'more': 1, 'than': 1}
 
         clf = TextClassifier(d1)
 
