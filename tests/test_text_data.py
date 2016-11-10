@@ -3,6 +3,7 @@ import unittest
 from Assignment.text_data import Document
 from Assignment.dataset import TextData
 
+
 class TestDocumentMethods(unittest.TestCase):
 
     TextData.define_article_data('../Assignment/data/news_articles.mtx')
