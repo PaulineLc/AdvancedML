@@ -19,7 +19,7 @@ class TestCosineCalculation(unittest.TestCase):
         # creating mock objects
         clf = TextClassifier(d1)
         clf.document.bag_of_words = d1_bag_of_words
-        clf.all_bags_of_words[2] = d2.bag_of_words
+        clf.all_documents[2] = d2.bag_of_words
         cosine = clf.calculate_cosine(2)
 
         self.assertAlmostEqual(cosine, 0.577, places=3)
@@ -44,8 +44,8 @@ class TestCosineCalculation(unittest.TestCase):
         # creating mock objects
         clf = TextClassifier(d2)
         clf.document.bag_of_words = d2_bag_of_words
-        clf.all_bags_of_words[d1] = d1_bag_of_words
-        clf.all_bags_of_words[d3] = d3_bag_of_words
+        clf.all_documents[d1] = d1_bag_of_words
+        clf.all_documents[d3] = d3_bag_of_words
 
         # calculating cosine
         cos_d1 = clf.calculate_cosine(1)
@@ -70,7 +70,7 @@ class TestCosineCalculation(unittest.TestCase):
         # creating mock objects
         clf = TextClassifier(d1)
         clf.document.bag_of_words = d1_bag_of_words
-        clf.all_bags_of_words[d2] = d2_bag_of_words
+        clf.all_documents[d2] = d2_bag_of_words
 
         # calculating cosine
         cosine = clf.calculate_cosine(2)
@@ -87,6 +87,6 @@ class TestCosineCalculation(unittest.TestCase):
         # creating mock classifier
         clf = TextClassifier(1)
         clf.document.bag_of_words = {'Julie': 1, 'Linda': 1, 'loves': 2, 'me': 2, 'more': 1, 'than': 1}
-        clf.all_bags_of_words[2] = d2.bag_of_words
+        clf.all_documents[2] = d2.bag_of_words
 
         self.assertAlmostEqual(clf.calculate_cosine(2), 0.822, places=3)
