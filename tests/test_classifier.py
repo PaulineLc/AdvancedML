@@ -90,3 +90,6 @@ class TestCosineCalculation(unittest.TestCase):
         clf.all_documents[2] = d2.bag_of_words
 
         self.assertAlmostEqual(clf.calculate_cosine(2), 0.822, places=3)
+
+if __name__ == '__main__':
+    unittest.main()
