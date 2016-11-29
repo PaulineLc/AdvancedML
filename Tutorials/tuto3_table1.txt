@@ -1,0 +1,11 @@
+RainRecently(RR) RainToday(RT) Temp(T) Wind(W) Sunshine(S) Swimming
+1 Moderate Moderate Warm Light Some Yes
+2 Light Moderate Warm Moderate None No
+3 Moderate Moderate Cold Gale None No
+4 Moderate Moderate Warm Light None Yes
+5 Moderate Light Cold Light Some No
+6 Heavy Light Cold Moderate Some Yes
+7 Light Light Cold Moderate Some No
+8 Moderate Moderate Cold Gale Some No
+9 Heavy Heavy Warm Moderate None Yes
+10 Light Light Cold Light Some No

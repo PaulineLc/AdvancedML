@@ -1,0 +1,13 @@
+Example TrueClassLabel KNN_Prediction J48_Prediction SVM_Prediction
+1 spam spam spam spam
+2 non-spam non-spam spam non-spam
+3 spam non-spam non-spam spam
+4 non-spam non-spam non-spam non-spam
+5 spam spam spam spam
+6 non-spam non-spam non-spam non-spam
+7 non-spam spam spam non-spam
+8 non-spam non-spam spam spam
+9 spam spam non-spam spam
+10 spam spam non-spam non-spam
+11 spam non-spam non-spam spam
+12 spam spam spam spam

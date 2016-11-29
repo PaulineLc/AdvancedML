@@ -1,0 +1,3 @@
+RainRecently(RR) RainToday(RT) Temp(T) Wind(W) Sunshine(S) Swimming
+X1 Heavy Moderate Warm Light Some ???
+X2 Light Moderate Warm Light Some ???
