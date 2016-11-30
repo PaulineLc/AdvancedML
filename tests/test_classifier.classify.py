@@ -6,9 +6,9 @@ from Assignment.document import Document
 from Assignment.dataset import Dataset
 
 
-class ClassifierUpdateSimilarities(unittest.TestCase):
+class ClassifierClassify(unittest.TestCase):
 
-    def test_populate_dictionary(self):
+    def test_classification(self):
         # creating mock database
         Dataset.article_data = pd.DataFrame({'doc_id': [1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3],
                                              'term_id': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 5, 11, 12],
