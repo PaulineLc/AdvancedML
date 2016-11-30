@@ -4,7 +4,7 @@ from Assignment.document import Document
 from Assignment.dataset import Dataset
 
 
-class TestDocumentMethods(unittest.TestCase):
+class TestDocumentLabel(unittest.TestCase):
 
     Dataset.define_article_data('../Assignment/data/news_articles.mtx')
     Dataset.define_article_labels('../Assignment/data/news_articles.labels')
