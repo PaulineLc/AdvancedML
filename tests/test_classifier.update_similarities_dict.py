@@ -16,12 +16,6 @@ class ClassifierUpdateSimilarities(unittest.TestCase):
 
         Dataset.article_labels = pd.DataFrame({'doc_id': [1, 2, 3], 'class': ['car', 'car', 'animal']})
 
-        # set training set to document 2 and 3
-        TextClassifier.training_set = Dataset.article_labels[1:]
-
-        # set test set to document 1 -- but won't be used.
-        TextClassifier.test_set = Dataset.article_labels[:1]
-
         # Create new classifier for document 1
         clf = TextClassifier(1)
 
