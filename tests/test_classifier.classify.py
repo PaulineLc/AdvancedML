@@ -2,7 +2,6 @@ import unittest
 import pandas as pd
 
 from Assignment.classifier import TextClassifier
-from Assignment.document import Document
 from Assignment.dataset import Dataset
 
 

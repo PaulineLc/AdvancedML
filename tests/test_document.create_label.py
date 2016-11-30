@@ -6,10 +6,10 @@ from Assignment.dataset import Dataset
 
 class TestDocumentLabel(unittest.TestCase):
 
-    Dataset.define_article_data('../Assignment/data/news_articles.mtx')
-    Dataset.define_article_labels('../Assignment/data/news_articles.labels')
-
     def test_get_category(self):
+        Dataset.define_article_data('../Assignment/data/news_articles.mtx')
+        Dataset.define_article_labels('../Assignment/data/news_articles.labels')
+
         d1 = Document(1)
         self.assertEqual(d1._create_label(), 'business')
 
