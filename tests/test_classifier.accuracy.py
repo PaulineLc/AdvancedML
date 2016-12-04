@@ -29,6 +29,8 @@ class ClassifierClassify(unittest.TestCase):
 
         Dataset.article_labels = pd.DataFrame({'doc_id': [99997, 99996, 99995], 'class': ['car', 'car', 'animal']})
 
+        Dataset.word_bank_size = 12
+
         accuracy = TextClassifier.calculate_accuracy(0, 0.67)
 
         self.assertEqual(accuracy, (0, 0))
@@ -53,6 +55,8 @@ class ClassifierClassify(unittest.TestCase):
                                              'nb_occurrences': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]})
 
         Dataset.article_labels = pd.DataFrame({'doc_id': [99997, 99996, 99995], 'class': ['car', 'car', 'animal']})
+
+        Dataset.word_bank_size = 12
 
         # compute accuracy
         accuracy = TextClassifier.calculate_accuracy(1, 3)
@@ -79,6 +83,8 @@ class ClassifierClassify(unittest.TestCase):
                                              'nb_occurrences': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]})
 
         Dataset.article_labels = pd.DataFrame({'doc_id': [99997, 99996, 99995], 'class': ['car', 'car', 'animal']})
+
+        Dataset.word_bank_size = 12
 
         # compute accuracy
         accuracy = TextClassifier.calculate_accuracy()

@@ -26,6 +26,8 @@ class ClassifierClassify(unittest.TestCase):
                                              'term_id': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 6, 5, 11, 12],
                                              'nb_occurrences': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]})
 
+        Dataset.word_bank_size = 12
+
         Dataset.article_labels = pd.DataFrame({'doc_id': [99997, 99996, 99995], 'class': ['car', 'car', 'animal']})
 
         # Set training set

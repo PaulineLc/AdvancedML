@@ -12,11 +12,11 @@ class TestCosineCalculation(unittest.TestCase):
         d1 = Document(99999)
         # in all the examples used, the protected attribute bag of words is set directly.
         # this is bad practice, however only used for the purpose of testing
-        d1._bag_of_words = {1: 1, 2: 1, 3: 1, 4: 1}
+        d1._bag_of_words = [1, 1, 1, 1, 0]
 
         # Create a document for the sentence "cup winners 2016"
         d2 = Document(99998)
-        d2._bag_of_words = {2: 1, 3: 1, 5: 1}
+        d2._bag_of_words = [0, 1, 1, 0, 1]
 
         self.assertAlmostEqual(d1.cosine_similarity(d2), 0.577, places=3)
         self.assertAlmostEqual(d2.cosine_similarity(d1), 0.577, places=3)
@@ -29,12 +29,12 @@ class TestCosineCalculation(unittest.TestCase):
         # creating first mock Document
         # d1 sentence: "jaguars are expensive cars"
         d1 = Document(99997)
-        d1._bag_of_words = {1:1, 2:1, 3:1, 4: 1}
+        d1._bag_of_words = [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
 
         # creating second mock Document
         # d2 sentence: "a jaguar is a costly vehicle"
         d2 = Document(99996)
-        d2._bag_of_words = {5:1, 6:1, 7:1, 8:1, 9:1}
+        d2._bag_of_words = [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
 
         # creating 3rd and last mock Document
         # d2 sentence: "the jaguar, a feline animal"

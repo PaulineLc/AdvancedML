@@ -57,6 +57,8 @@ class ClassifierUpdateSimilarities(unittest.TestCase):
 
         Dataset.article_labels = pd.DataFrame({'doc_id': [99997, 99996, 99995], 'class': ['car', 'car', 'animal']})
 
+        Dataset.word_bank_size = 12
+
         TextClassifier.training_set = [99997, 99995]
 
         # Create new classifier for document 1
