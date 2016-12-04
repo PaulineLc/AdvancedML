@@ -31,7 +31,7 @@ class ClassifierClassify(unittest.TestCase):
 
         Dataset.word_bank_size = 12
 
-        accuracy = TextClassifier.calculate_accuracy(0, 0.67)
+        accuracy = TextClassifier.calculate_accuracy(0, 0.67, 2)
 
         self.assertEqual(accuracy, (0, 0))
 

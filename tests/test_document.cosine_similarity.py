@@ -39,7 +39,7 @@ class TestCosineCalculation(unittest.TestCase):
         # creating 3rd and last mock Document
         # d2 sentence: "the jaguar, a feline animal"
         d3 = Document(99995)
-        d3._bag_of_words = {10:1, 6:1, 5:1, 11:1, 12:1}
+        d3._bag_of_words = [0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1]
 
         self.assertAlmostEqual(d1.cosine_similarity(d2), 0.0, places=1)
         self.assertAlmostEqual(d3.cosine_similarity(d2), 0.4, places=1)
@@ -54,12 +54,12 @@ class TestCosineCalculation(unittest.TestCase):
         # creating mock document
         # d1 sentence: zoe is the prettiest cat that has ever been or will ever be
         d1 = Document(99994)
-        d1._bag_of_words = {1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1, 8:1, 9:1, 10:1, 11:1, 12:1}
+        d1._bag_of_words = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
 
         # creating other mock documents
         # d2 sentence: zoe is my cat and she is very pretty
         d2 = Document(99993)
-        d2._bag_of_words = {1:1, 2:1, 13:1, 5:1, 14:1, 15:1, 17:1, 16:1}
+        d2._bag_of_words = [1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
 
         self.assertAlmostEqual(d1.cosine_similarity(d2), 0.3062, places=4)
         self.assertAlmostEqual(d2.cosine_similarity(d1), 0.3062, places=4)
@@ -70,11 +70,11 @@ class TestCosineCalculation(unittest.TestCase):
 
         # creating mock document
         d1 = Document(99992)
-        d1._bag_of_words = {'Jane': 1, 'Julie': 1, 'likes': 1, 'loves': 1, 'me': 2, 'more': 1, 'than': 1}
+        d1._bag_of_words = [2, 1, 0, 2, 0, 1, 1, 1]
 
         # creating other mock document
         d2 = Document(99991)
-        d2._bag_of_words = {'Julie': 1, 'Linda': 1, 'loves': 2, 'me': 2, 'more': 1, 'than': 1}
+        d2._bag_of_words = [2, 1, 1, 1, 1, 0, 1, 1]
 
         self.assertAlmostEqual(d1.cosine_similarity(d2), 0.822, places=3)
         self.assertAlmostEqual(d2.cosine_similarity(d1), 0.822, places=3)
